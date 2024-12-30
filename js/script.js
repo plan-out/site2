@@ -14,4 +14,8 @@ var main_view = new Swiper("#main_view",{
 		bulletActiveClass:"active",	
 		//활성화된 슬라이드에 따라 페이지버튼에 추가되는 클래스명
   },	
+	navigation: {
+		nextEl: ".next",
+		prevEl: ".prev",
+	},
 });
