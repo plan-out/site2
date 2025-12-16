@@ -62,6 +62,9 @@ main{border:5px solid #000;}
 main .inner{width:1400px; margin:0 auto;
   border:5px solid #f00;}
 
+#main_view{width:1400px; height:550px;}
+#main_view .swiper-pagination{width:auto; left:auto; right:10px;}
+
 #search{margin:60px 0; border:1px solid var(--main);
   padding:5px 20px 5px 30px; border-radius:16px;
   box-shadow:0 0 16px #0001;}
@@ -161,22 +164,27 @@ main .inner{width:1400px; margin:0 auto;
   text-overflow:ellipsis;}
 
 
-.community_wrapper{height:500px; padding-top:60px;
-  background:#14a677; }
+.community_wrapper{padding-top:60px; position:relative;
+  background:#14a677;
+  background:linear-gradient(#14a677 70%,white 70%);}
+.community_wrapper::before{content:url("./images/bg-community.png");
+  position:absolute; top:-76px; right:0;}
+
 
 #community{width:1400px; margin:0 auto; position:relative;
   outline:2px solid #00f;}
 #community h2{font-size:30px; color:#fff; margin-bottom: 20px;}
 #community .sub_title{font-size:24px; color:#fff; margin-bottom:60px;}
-#community .more{position:absolute; top:0; right:0;
+#community .more{position:absolute; top:10px; right:0;
   font-size:18px; font-weight:bold; background:#ffd044;
   padding:0 20px; height:60px; line-height:60px; color:#000;
   border-radius:32px 0;}
+#community .more img{width:24px; vertical-align:-5px;}  
 #community ul{display:flex; gap:40px;}
 #community li{width:calc((100% - 40px * 3) / 4);}
 #community li .imgbox{border:1px solid #ddd; border-radius:16px;
   overflow:hidden; transition:all .3s;}
-#community li:hover .imgbox{box-shadow:0 8px 21px #000;}
+#community li:hover .imgbox{box-shadow:0 8px 21px #0008;}
 #community img{width:100%; transition:all .3s;}
 #community li:hover img{transform:scale(1.05);}
 #community .title{margin-top:40px; font-size:22px; font-weight:600;
