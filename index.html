@@ -17,6 +17,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
+  <script src="./js/EzenScrollClass.js"></script>
 </head>
 <!--git hub 수정-->
 <body>
@@ -332,6 +333,25 @@
         prevEl: '.community_prev',
       },
     });
+
+
+    /*스크롤클래스 플러그인 호출하기*/
+    var header_plugin = new EzenScrollClass("header",{
+      baseline:200
+    }); 
+
+    var container_plugin = new EzenScrollClass(".container",{
+      class:"active",
+      baseline :"middle",
+      add:0.1
+    }); 
+
+    var online_plugin = new EzenScrollClass("#online",{
+      baseline:"middle",
+      class:"show"
+    });
+
+
   </script>
 </body>
 
